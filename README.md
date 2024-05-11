@@ -50,18 +50,24 @@ pm=['Hot','Warm','Cold']
 e1=OrdinalEncoder(categories=[pm])
 e1.fit_transform(df[["ord_2"]])
 ```
+
 <img width="164" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/72600df4-d9e2-4fdb-8e4e-bfc7a8fdd2a6">
+
 ```
 df['bo2']=e1.fit_transform(df[["ord_2"]])
 df
 ```
+
 <img width="254" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/96561bda-34a5-4670-ac1c-827c28fd542a">
+
+
 ```
 le=LabelEncoder()
 dfc=df.copy()
 dfc["ord_2"]=le.fit_transform(dfc["ord_2"])
 dfc
 ```
+
 <img width="278" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/f4fd2b73-e41d-48ef-95a3-21442d681802">
 
 ```
@@ -72,24 +78,30 @@ enc=pd.DataFrame(ohe.fit_transform(df2[["nom_0"]]))
 df2=pd.concat([df2,enc],axis=1)
 df2
 ```
+
 <img width="282" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/16e36ec9-3f71-43ad-8d58-f9dcee249379">
 
 ```
 pd.get_dummies(df2,columns=["nom_0"])
 ```
+
 <img width="412" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/b7e33c19-e9f7-4f18-afb3-44207c695e0c">
 
 ```
 pip install --upgrade category_encoders
 ```
+
 <img width="750" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/b9ee12ae-f07d-4a9b-a4e0-90e1934489f4">
+
 ```
 from category_encoders import BinaryEncoder
 df=pd.read_csv("")
 ```
+
 ```
 pip install --upgrade category_encoders
 ```
+
 <img width="731" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/aecad41c-6b13-4d62-8cb6-f9e4624b7626">
 
 ```
@@ -101,6 +113,7 @@ dfb=pd.concat([df,nd],axis=1)
 dfb1=df.copy()
 dfb
 ```
+
 <img width="432" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/f7461fda-a3fd-45d7-84b0-70c0aea8a36d">
 
 ```
@@ -111,12 +124,15 @@ new=te.fit_transform(X=cc["City"],y=cc["Target"])
 cc=pd.concat([cc,new],axis=1)
 cc
 ```
+
 <img width="449" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/9a2bd082-0106-47c5-b3ca-cd4ba685e258">
+
 ```
 import pandas as pd
 df=pd.read_csv("/content/Encoding Data (2).csv")
 df
 ```
+
 <img width="245" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/efae3b05-5912-45e2-969f-7b22d6d41f21">
 
 ```
@@ -127,25 +143,31 @@ df=pd.read_csv("/content/Data_to_Transform.csv")
 df
 
 ```
+
 <img width="467" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/ab576b24-72ac-4275-905f-86125df7e34e">
 
 ```
 df.skew
 ```
+
 <img width="514" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/3b889ada-91a1-464c-a1cd-bd6a8784e99e">
+
 ```
 df.skew()
 ```
+
 <img width="242" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/f38178be-88c9-4d09-97b8-349c82b76728">
 
 ```
 np.log(df["Highly Positive Skew"])
 ```
+
 <img width="424" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/bf48d9c9-8a36-4f2a-8cc3-322b4ac9c7d0">
 
 ```
 np.reciprocal(df["Moderate Positive Skew"])
 ```
+
 <img width="353" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/19772a39-5376-40b9-9398-66e9ba1a66ec">
 
 ```
