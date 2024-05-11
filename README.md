@@ -153,13 +153,14 @@ np.sqrt(df["Highly Positive Skew"])
 ```
 <img width="295" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/2b7ab12f-5d8e-45f8-9e66-839ec6ac67e2">
 
-```
-<img width="360" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/c7bdf03d-d423-4ee1-9435-667a0443c73f">
+
+
 
 ```
 np.square(df["Highly Positive Skew"])
 ```
 <img width="320" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/6043b866-f915-4583-9350-b7c97fc682d6">
+
 ```
 df
 ```
@@ -169,17 +170,20 @@ df
 df["Highly Positive Skew_boxcox"], parameters=stats.boxcox(df["Highly Positive Skew"])
 df
 ```
+
 <img width="596" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/d959a585-01e5-44c7-bbd6-1f22bf2932e1">
 
 ```
 df.skew()
 ```
+
 <img width="228" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/1ba28a42-413a-42cc-ae97-11a75f062ff5">
 
 ```
 df["Highly Negative Skew_yeojohnson"],parameters=stats.yeojohnson(df["Highly Negative Skew"])
 df.skew()
 ```
+
 <img width="264" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/54a3b99f-e99f-443a-95bb-a90cbfd41c32">
 
 ```
@@ -187,16 +191,19 @@ import seaborn as sns
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
 ```
+
 ```
 sm.qqplot(df["Moderate Negative Skew"],line='45')
 plt.show
 ```
+
 <img width="521" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/a9f5ce8a-d2f4-486d-9abd-2e30593f3696">
 
 ```
 sn.qqplot(np.reciprocal(df["Moderate Negative Skew"]),line='45')
 plt.show()
 ```
+
 <img width="491" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/05f076d5-d16e-4dd1-b514-896357737f1f">
 
 ```
@@ -206,6 +213,7 @@ df["Moderate Negative Skew"]=qt.fit_transform(df[["Moderate Negative Skew"]])
 sm.qqplot(df["Moderate Negative Skew"],line='45')
 plt.show()
 ```
+
 <img width="404" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/68663349-9684-41be-b754-2531c3210dfb">
 
 ```
@@ -213,6 +221,7 @@ df["Highly Negative Skew_1"]=qt.fit_transform(df[["Highly Negative Skew"]])
 sm.qqplot(df['Highly Negative Skew'],line='45')
 plt.show()
 ```
+
 <img width="477" alt="image" src="https://github.com/Jeevapriya14/EXNO-3-DS/assets/121003043/94d32968-aa17-4fb2-91c9-d6c952cdb58f">
 
 
